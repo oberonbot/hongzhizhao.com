@@ -21,7 +21,7 @@ const Test = () => {
         <div className='flex flex-row items-center gap-2 -translate-y-10 lg:-translate-y-5'>
           <Icons.spinner size={45} className='animate-spin' />
           <h1 className='font-heading text-3xl sm:text-4xl leading-tight lg:text-5xl font-bold select-none'>
-            Loading...
+            Loading...Test
           </h1>
         </div>
       </div>
