@@ -102,7 +102,7 @@ function sketch(p5Instance: P5CanvasInstance) {
   p5Instance.draw = () => {
     // Set the background color
     // p5Instance.background(0, 50);
-    p5Instance.clear(255, 255, 255, 5);
+    p5Instance.clear(255, 255, 255, 0);
 
     // Define the beacon's position using the mouse or touch input
     beacon = new p5.Vector(p5Instance.mouseX, p5Instance.mouseY);
