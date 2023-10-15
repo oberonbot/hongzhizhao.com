@@ -5,6 +5,7 @@ import projectGallery from '@/public/project-gallery2.jpg';
 import projectBigbrain from '@/public/project-bigbrain5.jpg';
 import projectBlog from '@/public/project-blog2.jpg';
 import TiltCard from '@/components/practice/tilt-card';
+import DisturbedPolka from '@/components/practice/disturbed-polka';
 
 export const links = [
   {
@@ -311,6 +312,14 @@ export const componentData = [
       content: React.createElement(TiltCard),
     },
   ],
-  [],
+  [
+    {
+      title: 'Disturbed Polka',
+      time: '10/13/2023',
+      id: '1',
+      videoUrl: 'disturbed-polka.gif',
+      content: React.createElement(DisturbedPolka),
+    },
+  ],
   [],
 ];

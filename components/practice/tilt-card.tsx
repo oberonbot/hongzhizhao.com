@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Tilt from 'react-parallax-tilt';
-import Link from '../ui/small-link';
+import Link from '../ui/link';
 
 const TiltCard = () => {
   return (
