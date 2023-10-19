@@ -17,7 +17,7 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        'yosemite': "url('/images/ui-dojo/yosemite.jpg')"
+        'yosemite': "url('/images/ui-dojo/yosemite.jpg')",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -91,6 +91,16 @@ module.exports = {
             opacity: 1,
           },
         },
+        'gradient-x': {
+          '0%, 100%': {
+            'background-size':'900% 100%',
+            'background-position': 'left center'
+          },
+          '50%': {
+              'background-size':'900% 100%',
+              'background-position': 'right center'
+          }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -100,6 +110,7 @@ module.exports = {
         'appear-2': 'appear 1s ease-in-out forwards',
         'appear-3': 'appear 1.3s ease-in-out forwards',
         'appear-4': 'appear 1.6s ease-in-out forwards',
+        'gradient-x': 'gradient-x 8s linear infinite',
       },
     },
 

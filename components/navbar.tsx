@@ -80,7 +80,7 @@ const NavBar = () => {
             <Icons.palette size={20} />
           </Button> */}
           <ModeToggle />
-          <Button
+          {/* <Button
             variant={'ghost'}
             size={'sm'}
             className='h-8 w-8 px-0 text-foreground/100'
@@ -88,7 +88,7 @@ const NavBar = () => {
             aria-label='languages'
           >
             <Icons.languages size={22} />
-          </Button>
+          </Button> */}
         </div>
 
         <MenuButton

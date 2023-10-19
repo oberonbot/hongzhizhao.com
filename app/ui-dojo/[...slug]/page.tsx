@@ -9,6 +9,7 @@ import { Icons } from '@/components/icons';
 
 type componentInfoProps = {
   title: string;
+  subtitle?: string;
   time: string;
   id: string;
   videoUrl: string;
@@ -22,6 +23,7 @@ const page = () => {
   let component:
     | {
         title: string;
+        subtitle?: string;
         time: string;
         id: string;
         videoUrl: string;
@@ -41,7 +43,7 @@ const page = () => {
   }
 
   if (component) {
-    const { title, time, id, videoUrl, content } = component;
+    const { title, subtitle, time, id, videoUrl, content } = component;
 
     return (
       <div className='w-full lg:4/5 xl:w-2/3 '>
@@ -65,8 +67,11 @@ const page = () => {
             >
               Published on {formatDate(time)}
             </time>
-            <h1 className='mt-2 inline-block font-heading text-4xl leading-tight lg:text-5xl font-bold'>
+            <h1 className='mt-2 font-heading text-4xl leading-tight lg:text-5xl font-bold'>
               {title}
+            </h1>
+            <h1 className='mt-4 font-heading text-xl lg:text-2xl text-foreground/60'>
+              {subtitle}
             </h1>
           </div>
           <hr className='mt-5' />

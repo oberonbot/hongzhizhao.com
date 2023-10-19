@@ -6,6 +6,7 @@ import projectBigbrain from '@/public/project-bigbrain5.jpg';
 import projectBlog from '@/public/project-blog2.jpg';
 import TiltCard from '@/components/practice/tilt-card';
 import DisturbedPolka from '@/components/practice/disturbed-polka';
+import Typography from '@/components/practice/typograhy';
 
 export const links = [
   {
@@ -305,11 +306,12 @@ export const photographyData = [
 export const componentData = [
   [
     {
-      title: 'Tilt Card',
-      time: '09/25/2023',
-      id: '0',
-      videoUrl: 'tilt-card.gif',
-      content: React.createElement(TiltCard),
+      title: 'Typography',
+      subtitle: 'With animated gradient background',
+      time: '10/19/2023',
+      id: '2',
+      videoUrl: 'typography.gif',
+      content: React.createElement(Typography),
     },
   ],
   [
@@ -321,5 +323,13 @@ export const componentData = [
       content: React.createElement(DisturbedPolka),
     },
   ],
-  [],
+  [
+    {
+      title: 'Tilt Card',
+      time: '09/25/2023',
+      id: '0',
+      videoUrl: 'tilt-card.gif',
+      content: React.createElement(TiltCard),
+    },
+  ],
 ];
