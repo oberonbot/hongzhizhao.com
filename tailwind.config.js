@@ -63,6 +63,9 @@ module.exports = {
         sans: [...fontFamily.sans],
         heading: ["var(--font-heading)", ...fontFamily.sans],
       },
+      boxShadow: {
+        'pure-black': '0 0 0 100px rgba(0,0,0,1)',
+      },
       keyframes: {
         'pulse': {
           '50%': {
@@ -97,8 +100,29 @@ module.exports = {
             'background-position': 'left center'
           },
           '50%': {
-              'background-size':'900% 100%',
-              'background-position': 'right center'
+            'background-size':'900% 100%',
+            'background-position': 'right center'
+          }
+        },
+
+        'island-active': {
+          '50%': {
+            'border-radius': '500px'
+          },
+          '100%': {
+            'border-radius': '46px'
+          }
+        },
+
+        'radio-bar': {
+          '0%': {
+            height: '20%'
+          },
+          '50%': {
+            height: '90%'
+          },
+          '100%': {
+            height: '20%'
           }
         }
       },
@@ -111,6 +135,7 @@ module.exports = {
         'appear-3': 'appear 1.3s ease-in-out forwards',
         'appear-4': 'appear 1.6s ease-in-out forwards',
         'gradient-x': 'gradient-x 8s linear infinite',
+        'island-active': 'island-active 0.1s ease-in-out forwards',
       },
     },
 

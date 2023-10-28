@@ -7,6 +7,7 @@ import projectBlog from '@/public/project-blog2.jpg';
 import TiltCard from '@/components/practice/tilt-card';
 import DisturbedPolka from '@/components/practice/disturbed-polka';
 import Typography from '@/components/practice/typograhy';
+import DynamicIsland from '@/components/practice/dynamic-island/dynamic-island';
 
 export const links = [
   {
@@ -306,6 +307,22 @@ export const photographyData = [
 export const componentData = [
   [
     {
+      title: 'Dynamic Island',
+      time: '10/28/2023',
+      id: '3',
+      videoUrl: 'dynamic-island.gif',
+      content: React.createElement(DynamicIsland),
+    },
+    {
+      title: 'Tilt Card',
+      time: '09/25/2023',
+      id: '0',
+      videoUrl: 'tilt-card.gif',
+      content: React.createElement(TiltCard),
+    },
+  ],
+  [
+    {
       title: 'Typography',
       subtitle: 'With animated gradient background',
       time: '10/19/2023',
@@ -321,15 +338,6 @@ export const componentData = [
       id: '1',
       videoUrl: 'disturbed-polka.gif',
       content: React.createElement(DisturbedPolka),
-    },
-  ],
-  [
-    {
-      title: 'Tilt Card',
-      time: '09/25/2023',
-      id: '0',
-      videoUrl: 'tilt-card.gif',
-      content: React.createElement(TiltCard),
     },
   ],
 ];

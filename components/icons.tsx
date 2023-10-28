@@ -30,6 +30,11 @@ import {
   type XIcon as LucideIcon,
 } from 'lucide-react';
 
+import { AiOutlineStar, AiFillStar } from 'react-icons/ai';
+import { IoPlayBack, IoPlayForward } from 'react-icons/io5';
+import { FaPlay } from 'react-icons/fa';
+import { PiPauseFill } from 'react-icons/pi';
+
 export type Icon = (typeof Icons)[keyof typeof Icons];
 
 export const Icons = {
@@ -77,4 +82,50 @@ export const Icons = {
   languages: Languages,
   menu: Menu,
   binary: Binary,
+  starOutline: AiOutlineStar,
+  starFilled: AiFillStar,
+  playBack: IoPlayBack,
+  playForward: IoPlayForward,
+  pause: PiPauseFill,
+  play: FaPlay,
+  airdrop: () => (
+    <svg
+      width={24}
+      height={24}
+      xmlns='http://www.w3.org/2000/svg'
+      id='airdrop'
+      x='0'
+      y='0'
+      version='1.1'
+      viewBox='0 0 29 29'
+      // xml:space='preserve'
+    >
+      <path
+        fill='none'
+        stroke='#a3a3a3'
+        strokeMiterlimit='10'
+        strokeWidth='2'
+        d='M9.197 19.303A7.503 7.503 0 0 1 7 14c0-4.114 3.386-7.5 7.5-7.5S22 9.886 22 14a7.503 7.503 0 0 1-2.197 5.303'
+      ></path>
+      <path
+        fill='none'
+        stroke='#a3a3a3'
+        strokeMiterlimit='10'
+        strokeWidth='2'
+        d='M12.025 16.475A3.502 3.502 0 0 1 11 14c0-1.92 1.58-3.5 3.5-3.5S18 12.08 18 14c0 .928-.369 1.819-1.025 2.475'
+      ></path>
+      <path
+        fill='none'
+        stroke='#a3a3a3'
+        strokeMiterlimit='10'
+        strokeWidth='2'
+        d='M6.368 22.132A11.504 11.504 0 0 1 3 14C3 7.691 8.191 2.5 14.5 2.5S26 7.691 26 14c0 3.049-1.212 5.976-3.368 8.132'
+      ></path>
+      <path
+        fill='#a3a3a3'
+        stroke='#a3a3a3'
+        d='M14.5 17.308l9.192 9.192H5.308z'
+      ></path>
+    </svg>
+  ),
 };
