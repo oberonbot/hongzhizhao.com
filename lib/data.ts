@@ -8,6 +8,7 @@ import TiltCard from '@/components/practice/tilt-card';
 import DisturbedPolka from '@/components/practice/disturbed-polka';
 import Typography from '@/components/practice/typograhy';
 import DynamicIsland from '@/components/practice/dynamic-island/dynamic-island';
+import HalloweenGhost from '@/components/practice/halloween-ghost/halloween-ghost';
 
 export const links = [
   {
@@ -26,10 +27,10 @@ export const links = [
     name: 'Skills',
     hash: '#skills',
   },
-  {
-    name: 'Experience',
-    hash: '#experience',
-  },
+  // {
+  //   name: 'Experience',
+  //   hash: '#experience',
+  // },
   {
     name: 'Contact',
     hash: '#contact',
@@ -306,6 +307,13 @@ export const photographyData = [
 
 export const componentData = [
   [
+    // {
+    //   title: 'Halloween Ghost',
+    //   time: '10/13/2023',
+    //   id: '4',
+    //   videoUrl: 'disturbed-polka.gif',
+    //   content: React.createElement(HalloweenGhost),
+    // },
     {
       title: 'Dynamic Island',
       time: '10/28/2023',
@@ -320,6 +328,7 @@ export const componentData = [
       videoUrl: 'tilt-card.gif',
       content: React.createElement(TiltCard),
     },
+
   ],
   [
     {

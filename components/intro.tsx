@@ -22,14 +22,14 @@ export default function Intro() {
     >
       <div className='flex items-center justify-center'>
         <div className='relative'>
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               type: 'tween',
-              duration: 0.2,
+              duration: 0.01,
             }}
-          >
+          > */}
             <Image
               src='/me2.png'
               alt='Photo of Hongzhi'
@@ -39,7 +39,7 @@ export default function Intro() {
               priority={true}
               className='h-44 w-44 bg-blue-900 rounded-full object-cover border-[0.35rem] border-white shadow-2xl shadow-blue-700/40 dark:shadow-blue-700/50'
             />
-          </motion.div>
+          {/* </motion.div> */}
         </div>
       </div>
 
@@ -63,7 +63,7 @@ export default function Intro() {
         </div>
       </motion.div>
 
-      <motion.div
+      {/* <motion.div
         className='flex flex-col sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium'
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -117,7 +117,7 @@ export default function Intro() {
             <FaGithubSquare className='text-2xl' />
           </a>
         </div>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }
