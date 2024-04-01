@@ -1,6 +1,6 @@
 import React from 'react';
 import { photographyData } from '@/lib/data';
-import SmoothPhoto from '@/components/smooth-photo';
+import SmoothPhoto from '@/components/photography/smooth-photo';
 
 export const metadata = {
   title: 'Photography',

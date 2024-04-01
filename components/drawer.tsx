@@ -1,11 +1,11 @@
 import React from 'react';
 import MenuButton from './menu-button'; // Make sure to adjust the path accordingly
 import Link from 'next/link'; // Assuming you're using Next.js
+import { paths } from '@/lib/data';
 
 interface DrawerProps {
   isDrawerOpen: boolean;
   closeDrawer: () => void;
-  items?: { href: string; title: string }[];
 }
 const apprears = [
   'animate-appear-0',
@@ -16,8 +16,7 @@ const apprears = [
 ];
 const Drawer: React.FC<DrawerProps> = ({
   isDrawerOpen,
-  closeDrawer,
-  items,
+  closeDrawer
 }) => {
   return (
     <div
@@ -33,7 +32,7 @@ const Drawer: React.FC<DrawerProps> = ({
           ></MenuButton>
         </div>
         <div className='px-12 pt-10'>
-          {items?.map((item, index) => (
+          {paths?.map((item, index) => (
             <Link
               key={index}
               href={item.href}

@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import Link from '../ui/link';
-import CodeSnippet from '../code-snippet';
+import Link from '../link';
+import CodeSnippet from '../blog/code-snippet';
 import Image from 'next/image';
-import Code from '../ui/code';
+import Code from '../ui-dojo/code';
 
 const Typography = () => {
   const code1 = `

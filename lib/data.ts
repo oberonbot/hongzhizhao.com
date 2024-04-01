@@ -37,6 +37,29 @@ export const links = [
   },
 ] as const;
 
+export const paths = [
+  {
+    title: 'Home',
+    href: '/',
+  },
+  {
+    title: 'Blog',
+    href: '/blog',
+  },
+  {
+    title: 'Photography',
+    href: '/photography',
+  },
+  {
+    title: 'UI-Dojo',
+    href: '/ui-dojo',
+  },
+  {
+    title: 'Projects',
+    href: '/project',
+  },
+] as const;
+
 export const experiencesData = [
   {
     title: 'SamaritanScout.org',
@@ -107,22 +130,22 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  'HTML',
-  'CSS',
+  'React.js',
+  'Next.js',
+  'Angular.js',
+  'Node.js',
+  'Express.js',
   'JavaScript',
   'TypeScript',
+  'HTML',
+  'CSS',
   'Python',
   'Java',
   'SQL',
-  'React.js',
-  'Vue.js',
-  'Next.js',
-  'Node.js',
   'Tailwind CSS',
   'Material UI',
-  'Bootstrap',
   'Git',
-  'Linux',
+  'AWS',
   'Agile/Scrum',
 ] as const;
 

@@ -29,27 +29,25 @@ export default function About() {
         <span className='font-medium'> Computer Vision and NLP</span>, and even
         <span className='font-medium'> data analysis</span>.
         <span className='italic'>
-          I strive for elegant, readable and maintainable code and
+        &nbsp;I strive for elegant, readable and maintainable code and
           products.&nbsp;
         </span>
         My current core stack is
         <span className='font-medium'>
-          React, Next.js, Node.js and MongoDB,
+        &nbsp;React.js, Next.js, Node.js and MongoDB,
         </span>
-        and of course UI libraries like
-        <span className='font-medium'> Material UI and Tailwind CSS, </span>
-        and the
-        <span className='font-medium'> TypeScript </span>
-        language. I'm always on a quest to learn new techniques. I am currently
-        looking for a full time position as a software developer.
+        &nbsp;and of course UI libraries like
+        <span className='font-medium'> Material UI and Tailwind CSS </span>
+        and
+        <span className='font-medium'> TypeScript. </span>
       </p>
 
       <p>
         <span className='italic'>
-          I currently live in Jersey City, New Jersey, United States.
+          I currently live in Plainsboro, New Jersey, United States.
         </span>{' '}
-        When I'm not coding, I enjoy playing video games, playing musical
-        instruments, listening to music, and visiting art galleries and museums.
+        When I'm not coding, I enjoy playing video games, musical
+        instruments listening to music and visiting art galleries and museums.
       </p>
     </motion.section>
   );

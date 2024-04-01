@@ -1,5 +1,5 @@
-import Header from '@/components/header';
-import Intro from '@/components/intro';
+import Header from '@/components/landing-page/header';
+import Intro from '@/components/landing-page/intro';
 import React, { lazy } from 'react';
 
 export const metadata = {
@@ -9,12 +9,12 @@ export const metadata = {
 };
 
 
-const LazySectionDivider = lazy(() => import('@/components/section-divider'));
-const LazyAbout = lazy(() => import('@/components/about'));
-const LazyProjects = lazy(() => import('@/components/projects'));
-const LazySkills = lazy(() => import('@/components/skills'));
+const LazySectionDivider = lazy(() => import('@/components/landing-page/section-divider'));
+const LazyAbout = lazy(() => import('@/components/landing-page/about'));
+const LazyProjects = lazy(() => import('@/components/landing-page/projects'));
+const LazySkills = lazy(() => import('@/components/landing-page/skills'));
 // const LazyExperience = lazy(() => import('@/components/experience'));
-const LazyContact = lazy(() => import('@/components/contact'));
+const LazyContact = lazy(() => import('@/components/landing-page/contact'));
 
 export default function Home() {
   return (

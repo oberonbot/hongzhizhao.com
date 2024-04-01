@@ -10,6 +10,7 @@ interface TocProps {
   toc: TableOfContents;
 }
 
+// NOTE: This is for outline of a blog
 export function DashboardTableOfContents({ toc }: TocProps) {
   const itemIds = React.useMemo(
     () =>

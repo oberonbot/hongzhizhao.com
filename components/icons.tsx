@@ -27,7 +27,6 @@ import {
   Languages,
   Menu,
   Binary,
-  type XIcon as LucideIcon,
 } from 'lucide-react';
 
 import { AiOutlineStar, AiFillStar } from 'react-icons/ai';

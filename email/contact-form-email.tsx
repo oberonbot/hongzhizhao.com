@@ -10,7 +10,6 @@ import {
   Section,
   Text,
 } from "@react-email/components";
-import { Tailwind } from "@react-email/tailwind";
 
 type ContactFormEmailProps = {
   message: string;
@@ -25,20 +24,18 @@ export default function ContactFormEmail({
     <Html>
       <Head />
       <Preview>New message from your portfolio site</Preview>
-      <Tailwind>
-        <Body className="bg-gray-100 text-black">
+      <Body style={{ backgroundColor: '#f7fafc', color: '#1a202c' }}>
           <Container>
-            <Section className="bg-white borderBlack my-10 px-10 py-4 rounded-md">
-              <Heading className="leading-tight">
+            <Section style={{ backgroundColor: '#ffffff', borderWidth: '1px', borderColor: '#000000', marginTop: '40px', paddingLeft: '40px', paddingRight: '40px', paddingTop: '20px', paddingBottom: '20px', borderRadius: '0.375rem' }}>
+              <Heading style={{ marginTop: '0', marginBottom: '0.5rem', fontSize: '2.25rem', lineHeight: '2.5rem' }}>
                 You received the following message from the contact form
               </Heading>
               <Text>{message}</Text>
-              <Hr />
+              <Hr style={{ marginTop: '1rem', marginBottom: '1rem', borderWidth: '1px', borderColor: '#000000' }} />
               <Text>The sender's email is: {senderEmail}</Text>
             </Section>
           </Container>
         </Body>
-      </Tailwind>
     </Html>
   );
 }

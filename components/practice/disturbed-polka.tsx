@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import dynamic from 'next/dynamic';
-import Link from '../ui/link';
+import Link from '../link';
 
 const DynamicComponentWithNoSSR = dynamic(() => import('./polka-p5'), {
   ssr: false,

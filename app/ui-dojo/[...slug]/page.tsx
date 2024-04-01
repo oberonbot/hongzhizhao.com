@@ -4,7 +4,7 @@ import { usePathname, useSearchParams } from 'next/navigation';
 import { componentData } from '@/lib/data';
 import Link from 'next/link';
 import { cn, formatDate } from '@/lib/utils';
-import { buttonVariants } from '@/components/ui/button';
+import { buttonVariants } from '@/components/button';
 import { Icons } from '@/components/icons';
 
 type componentInfoProps = {

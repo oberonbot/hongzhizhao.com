@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import RadioWave from './radio-wave';
 import { Icons } from '@/components/icons';
-import Code from '@/components/ui/code';
+import Code from '@/components/ui-dojo/code';
 
 const DynamicIsland = () => {
   return (

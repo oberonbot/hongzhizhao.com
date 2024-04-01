@@ -1,19 +1,20 @@
 'use client';
 
-import React from 'react';
+import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import { links } from '@/lib/data';
 import Link from 'next/link';
 import clsx from 'clsx';
-import { useActiveSectionContext } from '@/context/active-section-context';
+import { ActiveSectionContext } from '@/context/active-section-context';
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
-    useActiveSectionContext();
+    useContext(ActiveSectionContext)!;
+
   return (
     <div className='hidden z-[900] relative sm:inline-block'>
       <motion.div
-        className='fixed left-1/2 border border-foreground-100/40 bg-background/80 shadow-lg shadow-foreground/[0.05] backdrop-blur-[0.5rem] top-[4.2rem] h-[2.6rem] w-[30.8rem] rounded-lg'
+        className='fixed left-1/2 border border-foreground-100/40 bg-background/80 shadow-lg shadow-foreground/[0.05] backdrop-blur-[0.5rem] top-[4.2rem] h-[2.6rem] w-[24rem] rounded-lg'
         initial={{ y: -100, x: '-50%', opacity: 0 }}
         animate={{ y: 0, x: '-50%', opacity: 1 }}
       ></motion.div>

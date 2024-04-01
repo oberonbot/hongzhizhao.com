@@ -1,7 +1,7 @@
-import { useActiveSectionContext } from '@/context/active-section-context';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import type { SectionName } from './types';
+import { ActiveSectionContext } from '@/context/active-section-context';
 
 export function useSectionInView(sectionName: SectionName, threshold = 0.75) {
   /**
@@ -11,7 +11,7 @@ export function useSectionInView(sectionName: SectionName, threshold = 0.75) {
   const { ref, inView } = useInView({
     threshold,
   });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+  const { setActiveSection, timeOfLastClick } = useContext(ActiveSectionContext)!;
 
   useEffect(() => {
     /**

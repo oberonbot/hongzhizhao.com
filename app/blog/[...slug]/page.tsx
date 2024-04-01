@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { allAuthors, allPosts } from '@/.contentlayer/generated';
 
-import { Mdx } from '@/components/mdx-components';
+import { Mdx } from '@/components/blog/mdx-components';
 
 import '@/styles/mdx.css';
 import { Metadata } from 'next';
@@ -10,7 +10,7 @@ import Link from 'next/link';
 
 // import { env } from '@/env.mjs';
 import { cn, formatDate } from '@/lib/utils';
-import { buttonVariants } from '@/components/ui/button';
+import { buttonVariants } from '@/components/button';
 import { Icons } from '@/components/icons';
 import { getTableOfContents } from '@/lib/toc';
 import { DashboardTableOfContents } from '@/components/toc';

@@ -1,6 +1,5 @@
 'use client';
 import './globals.css';
-// import { Inter as FontSans } from 'next/font/google';
 import localFont from 'next/font/local';
 import ActiveSectionContextProvider from '@/context/active-section-context';
 import Footer from '@/components/footer';
@@ -11,12 +10,6 @@ import PaletteContextProvider from '@/context/palette-context';
 import { cn } from '@/lib/utils';
 import { Analytics } from '@vercel/analytics/react';
 
-// const fontSans = FontSans({
-//   subsets: ['latin'],
-//   variable: '--font-sans',
-// });
-
-// Font files can be colocated inside of `pages`
 const fontHeading = localFont({
   src: '../assets/fonts/CalSans-SemiBold.woff2',
   variable: '--font-heading',
@@ -32,7 +25,6 @@ export default function RootLayout({
       <body
         className={cn(
           'min-h-screen relative bg-background font-sans antialiased',
-          // fontSans.variable,
           fontHeading.variable
         )}
       >

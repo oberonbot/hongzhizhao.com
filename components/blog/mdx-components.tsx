@@ -3,8 +3,8 @@ import NextImage from 'next/image';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 
 import { cn } from '@/lib/utils';
-import { Callout } from '@/components/callout';
-import { MdxCard } from '@/components/mdx-card';
+import { Callout } from '@/components/blog/callout';
+import { MdxCard } from '@/components/blog/mdx-card';
 
 // @ts-ignore
 const Image = (props) => (

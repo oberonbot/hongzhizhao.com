@@ -3,32 +3,10 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { Icons } from './icons';
-import { Button } from './ui/button';
-import MenuButton from './ui/menu-button';
-import Drawer from './ui/drawer';
+import MenuButton from './menu-button';
+import Drawer from './drawer';
 import { ModeToggle } from './mode-toggle';
-const items = [
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Blog',
-    href: '/blog',
-  },
-  {
-    title: 'Photography',
-    href: '/photography',
-  },
-  {
-    title: 'UI-Dojo',
-    href: '/ui-dojo',
-  },
-  {
-    title: 'Projects',
-    href: '/project',
-  },
-];
+import { paths } from '@/lib/data';
 
 const NavBar = () => {
   // const { palette, setPalette } = usePalette();
@@ -63,11 +41,11 @@ const NavBar = () => {
             <span className='font-bold inline-block'>Hongzhi.Zhao</span>
           </Link>
           <nav className='gap-6 flex'>
-            {items?.map((item, index) => (
+            {paths?.map((item, index) => (
               <Link
                 key={index}
                 href={item.href}
-                className=' flex items-center text-lg font-medium transition-colors text-foreground/60 hover:text-foreground/80 sm:text-sm'
+                className='flex items-center text-lg font-medium transition-colors text-foreground/60 hover:text-foreground/80 sm:text-sm'
               >
                 {item.title}
               </Link>
@@ -99,7 +77,6 @@ const NavBar = () => {
         <Drawer
           isDrawerOpen={isDrawerOpen}
           closeDrawer={closeDrawer}
-          items={items}
         />
       </div>
     </>

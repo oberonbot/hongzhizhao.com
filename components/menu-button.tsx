@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 interface MenuButtonProps {
   onClick: () => void;
   isDrawerOpen: boolean;
 }
 
+// This is for the animation button on mobile version
 const MenuButton: React.FC<MenuButtonProps> = ({ onClick, isDrawerOpen }) => {
   return (
     <button

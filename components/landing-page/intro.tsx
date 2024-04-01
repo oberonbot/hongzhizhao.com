@@ -1,18 +1,19 @@
 'use client';
 
 import Image from 'next/image';
-import React from 'react';
+import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
-import { HiDownload } from 'react-icons/hi';
-import { FaGithubSquare } from 'react-icons/fa';
+// import Link from 'next/link';
+// import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
+// import { HiDownload } from 'react-icons/hi';
+// import { FaGithubSquare } from 'react-icons/fa';
 import { useSectionInView } from '@/lib/hooks';
-import { useActiveSectionContext } from '@/context/active-section-context';
+import { ActiveSectionContext } from '@/context/active-section-context';
 
 export default function Intro() {
   const { ref } = useSectionInView('Home');
-  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const { setActiveSection, setTimeOfLastClick } =
+    useContext(ActiveSectionContext)!;
 
   return (
     <section
@@ -22,14 +23,14 @@ export default function Intro() {
     >
       <div className='flex items-center justify-center'>
         <div className='relative'>
-          {/* <motion.div
+          <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               type: 'tween',
               duration: 0.01,
             }}
-          > */}
+          >
             <Image
               src='/me2.png'
               alt='Photo of Hongzhi'
@@ -39,7 +40,7 @@ export default function Intro() {
               priority={true}
               className='h-44 w-44 bg-blue-900 rounded-full object-cover border-[0.35rem] border-white shadow-2xl shadow-blue-700/40 dark:shadow-blue-700/50'
             />
-          {/* </motion.div> */}
+          </motion.div>
         </div>
       </div>
 
