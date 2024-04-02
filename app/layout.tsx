@@ -9,6 +9,7 @@ import NavBar from '@/components/navbar';
 import PaletteContextProvider from '@/context/palette-context';
 import { cn } from '@/lib/utils';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const fontHeading = localFont({
   src: '../assets/fonts/CalSans-SemiBold.woff2',
@@ -34,6 +35,7 @@ export default function RootLayout({
               <NavBar />
               {children}
               <Analytics />
+              <SpeedInsights />
               <Footer />
 
               <Toaster position='top-right' />
