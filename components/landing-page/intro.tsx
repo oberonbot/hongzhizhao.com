@@ -2,18 +2,18 @@
 
 import Image from 'next/image';
 import React, { useContext } from 'react';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 // import Link from 'next/link';
 // import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 // import { HiDownload } from 'react-icons/hi';
 // import { FaGithubSquare } from 'react-icons/fa';
 import { useSectionInView } from '@/lib/hooks';
-import { ActiveSectionContext } from '@/context/active-section-context';
+// import { ActiveSectionContext } from '@/context/active-section-context';
 
 export default function Intro() {
   const { ref } = useSectionInView('Home');
-  const { setActiveSection, setTimeOfLastClick } =
-    useContext(ActiveSectionContext)!;
+  // const { setActiveSection, setTimeOfLastClick } =
+  //   useContext(ActiveSectionContext)!;
 
   return (
     <section
@@ -23,13 +23,13 @@ export default function Intro() {
     >
       <div className='flex items-center justify-center'>
         <div className='relative'>
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: 'tween',
-              duration: 0.01,
-            }}
+          <div
+          // initial={{ opacity: 0, scale: 0 }}
+          // animate={{ opacity: 1, scale: 1 }}
+          // transition={{
+          //   type: 'tween',
+          //   duration: 0.01,
+          // }}
           >
             <Image
               src='/me2.png'
@@ -40,14 +40,14 @@ export default function Intro() {
               priority={true}
               className='h-44 w-44 bg-blue-900 rounded-full object-cover border-[0.35rem] border-white shadow-2xl shadow-blue-700/40 dark:shadow-blue-700/50'
             />
-          </motion.div>
+          </div>
         </div>
       </div>
 
-      <motion.div
+      <div
         className='mb-10 mt-4 text-2xl font-medium !leading-[1.5] sm:text-[40px]'
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
+        // initial={{ opacity: 0, y: 100 }}
+        // animate={{ opacity: 1, y: 0 }}
       >
         <div className='flex flex-col items-center justify-center px-2 font-heading select-none'>
           <span>Hi, I'm Hongzhi (Ethan), </span>
@@ -62,9 +62,9 @@ export default function Intro() {
           </div>
           <span className='underline font-bold'>Next.js + Tailwind CSS.</span>
         </div>
-      </motion.div>
+      </div>
 
-      {/* <motion.div
+      {/* <div
         className='flex flex-col sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium'
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -118,7 +118,7 @@ export default function Intro() {
             <FaGithubSquare className='text-2xl' />
           </a>
         </div>
-      </motion.div> */}
+      </div> */}
     </section>
   );
 }
