@@ -45,7 +45,7 @@ export default function Intro() {
       </div>
 
       <div
-        className='mb-10 mt-4 text-2xl font-medium !leading-[1.5] sm:text-[40px]'
+        className='mb-6 mt-4 text-2xl font-medium !leading-[1.5] sm:text-[40px]'
         // initial={{ opacity: 0, y: 100 }}
         // animate={{ opacity: 1, y: 0 }}
       >
