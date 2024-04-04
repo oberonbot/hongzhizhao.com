@@ -38,7 +38,7 @@ export default function Intro() {
               height='100'
               loading='eager'
               priority={true}
-              className='h-44 w-44 bg-blue-900 rounded-full object-cover border-[0.35rem] border-white shadow-2xl shadow-blue-700/40 dark:shadow-blue-700/50'
+              className='h-44 w-44 bg-teal-800 rounded-full object-cover border-[0.35rem] border-white shadow-2xl shadow-teal-800/40 dark:shadow-teal-400/80'
             />
           </div>
         </div>

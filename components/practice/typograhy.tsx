@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import Link from '../link';
 import CodeSnippet from '../blog/code-snippet';

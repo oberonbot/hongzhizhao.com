@@ -146,12 +146,7 @@ export default async function PostPage({ params }: PostPageProps) {
                       height={42}
                       className='rounded-full bg-gray-100 border-[1px] border-gray-200 transform scale-[1.2]'
                     />
-                    <div className='flex-1 text-left leading-tight'>
-                      <p className='font-medium'>{author.title}</p>
-                      {/* <p className='text-[12px] text-muted-foreground'>
-                          @{author.twitter}
-                        </p> */}
-                    </div>
+
                   </Link>
                 ) : null
               )}
