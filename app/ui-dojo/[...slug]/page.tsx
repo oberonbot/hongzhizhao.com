@@ -16,7 +16,7 @@ type componentInfoProps = {
   content: React.ReactNode;
 };
 
-const page = () => {
+const UiDojoSlugPage = () => {
   const pathname = usePathname();
   const id = pathname.split('/')[2];
 
@@ -94,4 +94,4 @@ const page = () => {
   }
 };
 
-export default page;
+export default UiDojoSlugPage;
