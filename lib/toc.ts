@@ -1,19 +1,16 @@
-// @ts-nocheck
-// TODO: Fix this when we turn strict mode on.
-
 import { toc } from 'mdast-util-toc';
 import { remark } from 'remark';
 import { visit } from 'unist-util-visit';
 
 const textTypes = ['text', 'emphasis', 'strong', 'inlineCode'];
 
-function flattenNode(node) {
-  const p = [];
-  visit(node, (node) => {
-    if (!textTypes.includes(node.type)) return;
-    p.push(node.value);
+function flattenNode(node: any): string {
+  const p: string[] = [];
+  visit(node, (child: any) => {
+    if (!textTypes.includes(child.type)) return;
+    p.push(child.value);
   });
-  return p.join(``);
+  return p.join('');
 }
 
 interface Item {
@@ -26,13 +23,13 @@ interface Items {
   items?: Item[];
 }
 
-function getItems(node, current): Items {
+function getItems(node: any, current: any): Items {
   if (!node) {
     return {};
   }
 
   if (node.type === 'paragraph') {
-    visit(node, (item) => {
+    visit(node, (item: any) => {
       if (item.type === 'link') {
         current.url = item.url;
         current.title = flattenNode(node);
@@ -47,7 +44,7 @@ function getItems(node, current): Items {
   }
 
   if (node.type === 'list') {
-    current.items = node.children.map((i) => getItems(i, {}));
+    current.items = node.children.map((i: any) => getItems(i, {}));
 
     return current;
   } else if (node.type === 'listItem') {
@@ -63,7 +60,7 @@ function getItems(node, current): Items {
   return {};
 }
 
-const getToc = () => (node, file) => {
+const getToc = () => (node: any, file: any) => {
   const table = toc(node);
   file.data = getItems(table.map, {});
 };
@@ -75,5 +72,5 @@ export async function getTableOfContents(
 ): Promise<TableOfContents> {
   const result = await remark().use(getToc).process(content);
 
-  return result.data;
+  return result.data as TableOfContents;
 }

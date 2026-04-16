@@ -1,5 +1,4 @@
-import { env } from '@/env.mjs';
-import { ClassValue, clsx } from 'clsx';
+import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
 export const validateString = (
@@ -41,7 +40,3 @@ export function formatDate(input: string | number): string {
     year: 'numeric',
   });
 }
-
-// export function absoluteUrl(path: string) {
-//   return `${`localhost:3000`}${path}`;
-// }

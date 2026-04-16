@@ -1,6 +1,6 @@
 import Header from '@/components/landing-page/header';
 import Intro from '@/components/landing-page/intro';
-import React, { lazy } from 'react';
+import dynamic from 'next/dynamic';
 
 export const metadata = {
   title: 'Home',
@@ -8,26 +8,23 @@ export const metadata = {
     'This is the home page. Including introduction, links, projects, skills and contacts of mine.',
 };
 
-
-const LazySectionDivider = lazy(() => import('@/components/landing-page/section-divider'));
-const LazyAbout = lazy(() => import('@/components/landing-page/about'));
-const LazyProjects = lazy(() => import('@/components/landing-page/projects'));
-const LazySkills = lazy(() => import('@/components/landing-page/skills'));
-// const LazyExperience = lazy(() => import('@/components/experience'));
-const LazyContact = lazy(() => import('@/components/landing-page/contact'));
+const SectionDivider = dynamic(() => import('@/components/landing-page/section-divider'));
+const About = dynamic(() => import('@/components/landing-page/about'));
+const Projects = dynamic(() => import('@/components/landing-page/projects'));
+const Skills = dynamic(() => import('@/components/landing-page/skills'));
+const Contact = dynamic(() => import('@/components/landing-page/contact'));
 
 export default function Home() {
   return (
     <div className='pt-24 sm:pt-36'>
       <main className='flex flex-col items-center px-4'>
-          <Header />
-          <Intro />
-          <LazySectionDivider />
-          <LazyAbout /> 
-          <LazyProjects />
-          <LazySkills />
-          {/* <LazyExperience /> */}
-          <LazyContact />
+        <Header />
+        <Intro />
+        <SectionDivider />
+        <About />
+        <Projects />
+        <Skills />
+        <Contact />
       </main>
     </div>
   );

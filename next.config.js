@@ -1,12 +1,10 @@
+const { withContentlayer } = require('next-contentlayer2');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [
-    ],
-  },
-  experimental: {
-    serverActions: true,
+    remotePatterns: [],
   },
 };
 
-module.exports = nextConfig;
+module.exports = withContentlayer(nextConfig);

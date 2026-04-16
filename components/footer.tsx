@@ -7,7 +7,7 @@ export default function Footer() {
         &copy; 2030 Ricardo. All rights reserved.
       </small> */}
       <p className='text-xs'>
-        built with React & Next.js, TypeScript, Tailwind CSS, and hostted on
+        Built with React & Next.js, TypeScript, Tailwind CSS, and hosted on
         Vercel.
       </p>
     </footer>

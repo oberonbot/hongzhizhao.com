@@ -1,23 +1,26 @@
 'use client';
 import { useTheme } from 'next-themes';
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import {
   materialLight,
   atomDark,
 } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-const CodeSnippet = ({ code, language }) => {
+interface CodeSnippetProps {
+  code: string;
+  language: string;
+}
+
+const CodeSnippet = ({ code, language }: CodeSnippetProps) => {
   const { theme } = useTheme();
-  const [codeTheme, setCodeTheme] = React.useState(theme);
+  const [codeTheme, setCodeTheme] = React.useState<Record<string, React.CSSProperties>>(
+    theme === 'dark' ? atomDark : materialLight
+  );
+
   useEffect(() => {
-    if (theme === 'dark') {
-      setCodeTheme(atomDark);
-    } else {
-      setCodeTheme(materialLight);
-    }
-  });
+    setCodeTheme(theme === 'dark' ? atomDark : materialLight);
+  }, [theme]);
 
   return (
     <SyntaxHighlighter language={language} style={codeTheme}>

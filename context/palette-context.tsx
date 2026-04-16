@@ -13,7 +13,7 @@ interface PaletteContextType {
 const PaletteContext = createContext<PaletteContextType | undefined>(undefined);
 
 // Create the PaletteContextProvider
-export default function PaletteContextProvider({ children }: any) {
+export default function PaletteContextProvider({ children }: { children: React.ReactNode }) {
   const [palette, setCurrentPalette] = useState<Palette>({
     primary: paletteConfig.default.primary, // Default primary color
     secondary: paletteConfig.default.secondary, // Default secondary color
