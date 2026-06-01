@@ -20,18 +20,6 @@ export const links = [
     hash: '#about',
   },
   {
-    name: 'Projects',
-    hash: '#projects',
-  },
-  {
-    name: 'Skills',
-    hash: '#skills',
-  },
-  // {
-  //   name: 'Experience',
-  //   hash: '#experience',
-  // },
-  {
     name: 'Contact',
     hash: '#contact',
   },
@@ -53,10 +41,6 @@ export const paths = [
   {
     title: 'UI-Dojo',
     href: '/ui-dojo',
-  },
-  {
-    title: 'Projects',
-    href: '/project',
   },
 ] as const;
 

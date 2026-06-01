@@ -1,7 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const { fontFamily } = require("tailwindcss/defaultTheme")
-
-
 module.exports = {
   content: [
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -58,8 +55,18 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: [...fontFamily.sans],
-        heading: ["var(--font-heading)", ...fontFamily.sans],
+        sans: ['var(--font-body)', 'Arial', 'Helvetica', 'sans-serif'],
+        heading: ['var(--font-body)', 'Arial', 'Helvetica', 'sans-serif'],
+        mono: [
+          'ui-monospace',
+          'SFMono-Regular',
+          'Menlo',
+          'Monaco',
+          'Consolas',
+          '"Liberation Mono"',
+          '"Courier New"',
+          'monospace',
+        ],
       },
       boxShadow: {
         'pure-black': '0 0 0 100px rgba(0,0,0,1)',

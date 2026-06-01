@@ -2,7 +2,6 @@
 
 import React from 'react';
 import SectionHeading from './section-heading';
-// import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
 
 export default function About() {
@@ -11,44 +10,33 @@ export default function About() {
   return (
     <section
       ref={ref}
-      className='mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28'
-      // initial={{ opacity: 0, y: 100 }}
-      // animate={{ opacity: 1, y: 0 }}
-      // transition={{ delay: 0.175 }}
+      className='grid scroll-mt-28 gap-8 py-16 sm:py-24 lg:grid-cols-[220px_minmax(0,1fr)]'
       id='about'
     >
-      <SectionHeading>About me</SectionHeading>
-      <p className='mb-3'>
-        During my undergraduate and postgraduate studies, I have been exposed to
-        and mastered knowledge in many fields, from
-        <span className='font-medium'> operating system </span>
-        to
-        <span className='font-medium'> full-stack web development</span>, to
-        <span className='font-medium'>&nbsp;Machine Learning, </span>
-        such as
-        <span className='font-medium'> Computer Vision and NLP</span>, and even
-        <span className='font-medium'> data analysis</span>.
-        <span className='italic'>
-          &nbsp;I strive for elegant, readable and maintainable code and
-          products.&nbsp;
-        </span>
-        My current core stack is
-        <span className='font-medium'>
-          &nbsp;React.js, Next.js, Node.js and MongoDB,
-        </span>
-        &nbsp;and of course UI libraries like
-        <span className='font-medium'> Material UI and Tailwind CSS </span>
-        and
-        <span className='font-medium'> TypeScript. </span>
-      </p>
+      <SectionHeading>About</SectionHeading>
 
-      <p>
-        <span className='italic'>
-          I currently live in Plainsboro, New Jersey, United States.
-        </span>{' '}
-        When I'm not coding, I enjoy playing video games, musical instruments
-        listening to music and visiting art galleries and museums.
-      </p>
+      <div className='max-w-[760px] text-[clamp(1.6rem,4vw,3.7rem)] leading-[1.03] tracking-[-0.055em] text-foreground'>
+        <p>
+          I came through software by way of school, galleries, games, music,
+          and the strange comfort of making something small until it starts to
+          feel honest.
+        </p>
+
+        <div className='mt-10 grid gap-6 text-base leading-7 tracking-[-0.01em] text-foreground/65 sm:grid-cols-2'>
+          <p>
+            During undergraduate and postgraduate study, I moved through
+            operating systems, web development, machine learning, computer
+            vision, NLP, and data analysis. The technical path mattered, but
+            mostly because it gave me more ways to make things.
+          </p>
+          <p>
+            I currently live in Plainsboro, New Jersey. When I am not coding,
+            I play games and musical instruments, listen closely, and spend
+            time in galleries and museums, looking for the human hand inside
+            finished and unfinished things.
+          </p>
+        </div>
+      </div>
     </section>
   );
 }

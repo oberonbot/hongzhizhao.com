@@ -2,19 +2,13 @@
 
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { Icons } from './icons';
 import MenuButton from './menu-button';
 import Drawer from './drawer';
 import { ModeToggle } from './mode-toggle';
+import PalettePicker from './palette-picker';
 import { paths } from '@/lib/data';
 
 const NavBar = () => {
-  // const { palette, setPalette } = usePalette();
-
-  // const changePalette = (newPalette: Palette) => {
-  //   setPalette(newPalette);
-  // };
-
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const openDrawer = () => {
@@ -29,23 +23,24 @@ const NavBar = () => {
     <>
       {/* The blur layer */}
       <div
-        className={`absolute top-0 z-10  w-full ${
-          isDrawerOpen ? 'h-full bg-background/80 backdrop-blur-[0.3rem]' : ''
+        className={`absolute top-0 z-10 w-full ${
+          isDrawerOpen ? 'h-full bg-background/70 backdrop-blur-[0.3rem]' : ''
         } transition-all duration-500 `}
       ></div>
-      <div className='z-[900] fixed flex top-0 w-full px-5 sm:px-6 lg:px-28 xl:px-44 h-12 justify-between items-center bg-background/80 backdrop-blur-[0.6rem]'>
+      <div className='z-[900] fixed flex top-0 w-full px-5 sm:px-6 lg:px-10 h-14 justify-between items-center bg-background/25 backdrop-blur-md'>
         {/* Logo and Title */}
         <div className='hidden md:flex items-center gap-12'>
-          <Link href='/' className='items-center space-x-2 flex'>
-            <Icons.binary />
-            <span className='font-bold inline-block'>Hongzhi.Zhao</span>
+          <Link href='/' className='items-center flex'>
+            <span className='font-mono text-[11px] uppercase tracking-[0.22em] text-foreground/70'>
+              Hongzhi Zhao
+            </span>
           </Link>
-          <nav className='gap-6 flex'>
+          <nav className='gap-7 flex font-mono text-[11px] uppercase tracking-[0.18em]'>
             {paths?.map((item, index) => (
               <Link
                 key={index}
                 href={item.href}
-                className='flex items-center text-lg font-medium transition-colors text-foreground/60 hover:text-foreground/80 sm:text-sm'
+                className='flex items-center transition-colors text-foreground/45 hover:text-foreground/80'
               >
                 {item.title}
               </Link>
@@ -54,9 +49,7 @@ const NavBar = () => {
         </div>
 
         <div className='flex items-center justify-center gap-2 sm:gap-4 text-foreground/100 '>
-          {/* <Button variant={'ghost'} size={'sm'} className='h-8 w-8 px-0'>
-            <Icons.palette size={20} />
-          </Button> */}
+          <PalettePicker />
           <ModeToggle />
           {/* <Button
             variant={'ghost'}

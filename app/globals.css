@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+    --font-interface: var(--font-body), Arial, Helvetica, sans-serif;
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;
 
@@ -76,6 +77,34 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-interface);
     font-feature-settings: 'rlig' 1, 'calt' 1;
+    letter-spacing: -0.01em;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+      linear-gradient(
+        to bottom,
+        hsl(var(--background) / 0.48),
+        hsl(var(--background) / 0.2) 44%,
+        hsl(var(--background) / 0.58)
+      );
+  }
+
+  body::after {
+    content: none;
   }
 }

@@ -14,13 +14,13 @@ export default function Header() {
   return (
     <div className='hidden z-[900] relative sm:inline-block'>
       <div
-        className='fixed left-1/2 border -translate-x-[50%] border-foreground-100/40 bg-background/80 shadow-lg shadow-foreground/[0.05] backdrop-blur-[0.5rem] top-[4.2rem] h-[2.6rem] w-[24rem] rounded-lg'
+        className='fixed left-1/2 -translate-x-[50%] border border-foreground/10 bg-background/35 shadow-sm shadow-foreground/[0.03] backdrop-blur-md top-[4.35rem] h-[2.55rem] w-[25rem] rounded-full'
         // initial={{ y: -100, x: '-50%', opacity: 0 }}
         // animate={{ y: 0, x: '-50%', opacity: 1 }}
       ></div>
 
       <nav className='flex fixed left-1/2 -translate-x-1/2 top-[4.1rem] h-[initial] '>
-        <ul className='flex items-center justify-center gap-y-1 text-sm font-medium text-gray-500 w-[initial] flex-nowrap gap-2'>
+        <ul className='flex items-center justify-center gap-y-1 font-mono text-[11px] uppercase tracking-[0.18em] text-foreground/55 w-[initial] flex-nowrap gap-1'>
           {links.map((link) => (
             <li
               className='h-2/3 flex items-center justify-center relative'
@@ -30,9 +30,9 @@ export default function Header() {
             >
               <Link
                 className={clsx(
-                  'flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-400 dark:hover:text-gray-200',
+                  'relative flex w-full items-center justify-center px-3 py-3 transition hover:text-foreground',
                   {
-                    'text-gray-950 dark:text-gray-200':
+                    'text-foreground':
                       activeSection === link.name,
                   }
                 )}
@@ -46,7 +46,7 @@ export default function Header() {
 
                 {link.name === activeSection && (
                   <span
-                    className='bg-slate-200 dark:bg-slate-700 rounded-md absolute inset-0 -z-10'
+                    className='absolute bottom-2 left-1/2 h-px w-5 -translate-x-1/2 bg-foreground/70'
                     // layoutId='activeSection'
                     // transition={{
                     //   type: 'spring',

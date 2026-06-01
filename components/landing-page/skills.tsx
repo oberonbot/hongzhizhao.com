@@ -3,50 +3,28 @@
 import React from 'react';
 import SectionHeading from './section-heading';
 import { skillsData } from '@/lib/data';
-import { useSectionInView } from '@/lib/hooks';
-import { motion } from 'framer-motion';
-
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.05 * index,
-    },
-  }),
-};
 
 export default function Skills() {
-  const { ref } = useSectionInView('Skills', 1.0);
-
   return (
     <section
       id='skills'
-      ref={ref}
-      className='mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40'
+      className='grid scroll-mt-28 gap-8 py-16 sm:py-24 lg:grid-cols-[220px_minmax(0,1fr)]'
     >
-      <SectionHeading>My skills</SectionHeading>
-      <ul className='flex flex-wrap justify-center gap-2 text-md sm:text-lg text-foreground'>
-        {skillsData.map((skill, index) => (
-          <motion.li
-            className='bg-background border rounded-xl px-4 py-1 sm:px-5 sm:py-3 text-foreground'
-            key={index}
-            variants={fadeInAnimationVariants}
-            initial='initial'
-            whileInView='animate'
-            viewport={{
-              once: true,
-            }}
-            custom={index}
-          >
-            {skill}
-          </motion.li>
-        ))}
-      </ul>
+      <SectionHeading>Materials</SectionHeading>
+
+      <div>
+        <p className='max-w-[680px] text-[clamp(2rem,5vw,4.8rem)] leading-[0.95] tracking-[-0.075em]'>
+          The tools change. The habit is looking closely.
+        </p>
+
+        <ul className='mt-10 flex max-w-[760px] flex-wrap gap-x-5 gap-y-3 text-base leading-6 text-foreground/58 sm:text-lg'>
+          {skillsData.map((skill) => (
+            <li key={skill} className='after:ml-5 after:text-foreground/20 after:content-["/"] last:after:content-[""]'>
+              {skill}
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }
