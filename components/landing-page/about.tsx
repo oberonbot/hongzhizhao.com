@@ -17,23 +17,21 @@ export default function About() {
 
       <div className='max-w-[760px] text-[clamp(1.6rem,4vw,3.7rem)] leading-[1.03] tracking-[-0.055em] text-foreground'>
         <p>
-          I came through software by way of school, galleries, games, music,
-          and the strange comfort of making something small until it starts to
-          feel honest.
+          I like building things that feel useful, interactive, and
+          alive.
         </p>
 
         <div className='mt-10 grid gap-6 text-base leading-7 tracking-[-0.01em] text-foreground/65 sm:grid-cols-2'>
           <p>
-            During undergraduate and postgraduate study, I moved through
-            operating systems, web development, machine learning, computer
-            vision, NLP, and data analysis. The technical path mattered, but
-            mostly because it gave me more ways to make things.
+            I got my bachelor's China and master's in the United States, both in Computer Science, and
+            have 3 years of professional software engineering experience. My
+            work has moved across frontend, backend, and now AI-driven
+            development (who hasn't?).
           </p>
           <p>
-            I currently live in Plainsboro, New Jersey. When I am not coding,
-            I play games and musical instruments, listen closely, and spend
-            time in galleries and museums, looking for the human hand inside
-            finished and unfinished things.
+            I currently live in Lawrence Township, New Jersey. When I am not
+            coding, I play games and guitar, visit galleries and museums, or
+            take long city walks.
           </p>
         </div>
       </div>

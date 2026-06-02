@@ -16,19 +16,22 @@ export default function Intro() {
       <div className='grid gap-10 lg:grid-cols-[minmax(0,1fr)_330px] lg:items-end'>
         <div className='max-w-[850px]'>
           <p className='mb-6 font-mono text-[11px] uppercase tracking-[0.22em] text-foreground/55'>
-            Hongzhi Zhao / life, images, weather
+            Hongzhi Zhao / notes from the road
           </p>
 
           <h1 className='max-w-[920px] text-[clamp(3.5rem,10vw,8.6rem)] font-normal leading-[0.88] tracking-[-0.08em] text-foreground'>
-            Small things,
+            To make each day
             <br />
-            made by hand.
+             count.
           </h1>
 
           <p className='mt-8 max-w-[620px] text-lg leading-7 text-foreground/70 sm:text-xl sm:leading-8'>
-            A personal place for the things I keep returning to: photographs,
-            sound, awkward beauty, unfinished thoughts, and the quiet texture
-            of ordinary days.
+          Living in interesting times, there's little we can predict, change or even stabilize, instead of getting anxious from the internet and telling myself 'I will do that / travel there once I'm in a better situation', 
+          I'll use this place as not only a career site, but more as a record of things I like: blogs, photographs, projects and the quiet texture of ordinary days.
+          </p>
+
+          <p className='mt-8 max-w-[620px] text-lg leading-7 text-foreground/70 sm:text-xl sm:leading-8'>
+          I like driving, and I love hitting random roads, so buckle up, play the song that fits the mood, and let's get on the way :)
           </p>
 
           <div className='mt-10 flex flex-wrap gap-3 font-mono text-[11px] uppercase tracking-[0.18em]'>
@@ -47,7 +50,7 @@ export default function Intro() {
           </div>
         </div>
 
-        <div className='relative ml-auto w-full max-w-[300px] lg:mb-8'>
+        <div className='relative ml-auto w-full max-w-[300px] lg:mb-8 lg:-translate-y-32'>
           <div className='absolute -left-7 top-8 h-24 w-24 rotate-[-8deg] border border-foreground/15 bg-background/20' />
           <Image
             src='/me2.png'
@@ -59,7 +62,7 @@ export default function Intro() {
             className='relative aspect-[4/5] w-full rotate-[1.5deg] rounded-none border border-foreground/10 object-cover shadow-[18px_18px_0_rgba(15,23,42,0.08)] grayscale-[15%]'
           />
           <p className='mt-4 max-w-[260px] font-mono text-[11px] uppercase leading-5 tracking-[0.16em] text-foreground/50'>
-            Not a pitch deck. Just a room with my name on the door.
+          Picture I took from AWS Summit event in NYC 2023, for free!
           </p>
         </div>
       </div>

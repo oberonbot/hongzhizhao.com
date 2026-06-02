@@ -114,7 +114,7 @@ void main() {
 
 const NOISE_PIXEL_SIZE = 1.35;
 const PALETTE_LERP_AMOUNT = 0.035;
-const MOTION_SPEED = 1.75;
+const MOTION_SPEED = 3.75;
 
 function createShader(
   gl: WebGLRenderingContext,
@@ -320,8 +320,8 @@ export default function AnimatedGradientBackground() {
       ref={canvasRef}
       aria-hidden='true'
       className={cn(
-        'pointer-events-none fixed inset-0 z-0 h-dvh min-h-dvh w-full transition-opacity duration-700 ease-in',
-        isReady ? 'opacity-90 dark:opacity-70' : 'opacity-0'
+        'pointer-events-none fixed inset-0 z-0 h-dvh min-h-dvh w-full transition-opacity duration-500 ease-in',
+        isReady ? 'opacity-[0.55] dark:opacity-70' : 'opacity-0'
       )}
       style={{
         background: `
